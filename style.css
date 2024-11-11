@@ -1,0 +1,236 @@
+/*
+=================================================
+GLOBAL
+=================================================
+*/
+body{
+   margin: 0;
+}
+
+/*
+=================================================
+HEADER
+=================================================
+*/
+h1 {
+   width: 50%;
+   text-align: center;
+   font-size: 60px; 
+   margin: 0 auto;
+   font-weight: 20px;
+   text-transform: initial;
+   text-shadow: #AAA 1px 0 3px;
+}
+
+/*
+=================================================
+SEARCH
+=================================================
+*/
+form {
+   width: 100%;
+   max-width: 600px;
+   margin: 0 auto;
+   color: rgba(0, 0, 0, 0.5);
+}
+
+input {
+   width: 100%;
+   font-size: 32px;
+   margin: 5px 0;
+   border: none;
+   padding: 10px;
+   color: rgba(0, 0, 0, 0.9);
+   outline: none;
+   display: inline-block;
+}
+
+.search-bar {
+   width: 80%;
+   border-radius: 30px;
+   border-color: rgba(0, 0, 0, 1);
+}
+
+.submit-button {
+   width: 15%;
+   background: #000;
+   color: #FFF;
+}
+
+.submit-button::backdrop {
+   width: 100px;
+}
+
+/*
+=================================================
+BOOKMARKS
+=================================================
+*/
+.bookmarks a {
+   text-decoration: none;
+}
+
+.bookmarks {
+   padding: 30px;
+   clear: both;
+   display: flex; 
+   justify-content: center; 
+   gap: 22.5px; 
+}
+
+.bookmarks i {
+   font-size: 30px;
+   color: #000;
+   transition: 0.15s;
+   text-align: center;
+}
+
+.bookmarks i:hover {
+   font-size: 72px;
+   position: relative;
+}
+
+/*
+=================================================
+POST-IT NOTE
+=================================================
+*/
+#note {
+   width: 200px; 
+   height: 200px; 
+   resize: none; 
+   background: #F3F19D; 
+   padding: 20px; 
+   border: none;
+   position: absolute;
+   bottom: 50px;
+   left: 50px;
+   font-family: 'Arial', sans-serif; 
+   font-size: 18px; 
+   color: #333; 
+   border-radius: 12px; 
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1), -5px -5px 10px rgba(255, 255, 255, 0.3); 
+   transition: transform 0.2s ease-in-out, box-shadow 0.3s ease; 
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   flex-direction: column;
+}
+
+#note:hover {
+   transform: translateY(-5px); 
+   box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.15), -5px -5px 15px rgba(255, 255, 255, 0.4); 
+}
+
+/*
+=================================================
+CLOCK STYLES
+=================================================
+*/
+#clock {
+   font-family: 'Roboto', sans-serif; 
+   font-size: 50px; 
+   font-weight: bold;
+   color: #333; 
+   text-align: center; 
+   padding: 20px;
+   margin: 20px auto;
+   width: 250px;
+   height: 250px;
+   background: #fff; 
+   border-radius: 50%; 
+   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); 
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+   transition: all 0.3s ease; 
+}
+
+#clock span {
+   font-size: 48px;
+   color: #333;
+}
+
+/*
+=================================================
+NAVBAR STYLES
+=================================================
+*/
+#navbar {
+   background-color: #333; 
+   padding: 10px 20px; 
+   display: flex;
+   justify-content: space-between; 
+   align-items: center; 
+   position: fixed; 
+   top: 0;
+   width: 100%;
+   box-sizing: border-box;
+}
+
+#navbar .logo a {
+   color: #fff; 
+   font-size: 20px; 
+   font-weight: bold;
+   margin-left: 20px; 
+   text-decoration: none; 
+}
+
+#navbar .nav-links {
+   display: flex; 
+   list-style-type: none; 
+   margin-left: 50px;
+   padding: 0;
+}
+
+#navbar .nav-links li {
+   margin-left: 50px; 
+}
+
+#navbar .nav-links a {
+   color: #fff; 
+   text-decoration: none; 
+   font-size: 18px; 
+   padding: 8px 15px; 
+   border-radius: 5px; 
+   transition: background-color 0.3s ease; 
+}
+
+#navbar .nav-links a:hover {
+   background-color: #575757; 
+   color: #fff; 
+}
+
+#navbar .nav-toggle {
+   display: none; 
+   font-size: 30px;
+   color: #fff; 
+}
+
+/*
+=================================================
+POST-IT NOTE 
+=================================================
+*/
+#calc {
+   opacity: 0;
+   margin-top: 50px;
+}
+
+@media only screen and (max-width: 900px) {
+   h1 {
+       margin-top: 50px;
+       font-size: 100px;
+   }
+}
+
+@media only screen and (max-width: 600px) {
+   h1 {
+       margin-top: 50px;
+       font-size: 75px;
+   }
+
+   .bookmarks i {
+       margin: 0 15px;
+   }
+}

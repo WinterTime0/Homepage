@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Zachary's Homepage</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <textarea placeholder="Write a note..." id="note" onkeyup="autoSave()"></textarea>
+    <iframe width="219" height="302" id="calc"
+        src="http://calculator-1.com/outdoor/?f=0274C8&r=666666" scrolling="no" frameborder="0"></iframe>
+    <body onload="startTime()">
+        <h1>Hello Zachary!</h1>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="clock"></div>
+        <script src="myScripts.js" async defer></script>   
+        <!-- CALCULATOR -->        
+    </body>
+    <nav id="navbar">
+        <div class="logo">
+            <a href="#">Zachary's Homepage</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i> <!-- Hamburger icon for mobile -->
+        </div>
+    </nav>
+    <!-- GOOGLE SEARCH -->
+    <form action="https://google.com/search" method="get" target="_blank">
+        <input type="hidden" name="sitesearch" />
+        <input type="text" name="q" placeholder="search..." class="search-bar"/>
+        <input type="submit" value="GO" class="submit-button">
+    </form>
+    <section class="bookmarks">
+        <a href="https://mail.google.com" target="_blank">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <i class="fas fa-sticky-note" onclick="showNote()"></i>
+        <i class="fas fa-calculator" onclick="showCalculator()"></i>
+    </section>
+</html>
